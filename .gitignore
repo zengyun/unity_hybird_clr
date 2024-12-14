@@ -15,3 +15,6 @@ UnityGame/WritablePath
 UnityGame/HybridCLRData
 UnityGame/Assets/HybridCLRGenerate
 UnityGame/Assets/HybridCLRGenerate.meta
+exe
+UnityGame/Assets/StreamingAssets
+/UnityGame/Assets/StreamingAssets.meta
