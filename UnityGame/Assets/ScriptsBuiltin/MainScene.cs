@@ -10,6 +10,7 @@ public class MainScene : MonoBehaviour
         UGFileUtil.CreateDir(UGFileUtil.WriteablePath(""));
         CheckEventSystem();
         MainHolder.Instance.StartLoadGame();
+        gameObject.SetActive(true);
     }
 
     void CheckEventSystem()

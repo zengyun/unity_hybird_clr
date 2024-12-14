@@ -13,3 +13,5 @@ UnityGame/.vs
 UnityGame/obj
 UnityGame/WritablePath
 UnityGame/HybridCLRData
+UnityGame/Assets/HybridCLRGenerate
+UnityGame/Assets/HybridCLRGenerate.meta

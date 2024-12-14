@@ -7,6 +7,14 @@ public class GameMain
     public static void StartGame()
     {
         Debug.Log("GameMain StartGame");
-        MainLoadingPanel.Instance.SetProcess(50);
+        var panel = MainLoadingPanel.Instance;
+        if(panel == null)
+        {
+            Debug.Log("panel null");
+        }
+        else
+        {
+            MainLoadingPanel.Instance.SetProcess(50);
+        }        
     }
 }

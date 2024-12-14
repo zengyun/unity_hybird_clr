@@ -38,12 +38,12 @@ public class MainHolder : MonoBehaviour
     private Assembly m_assembly;
     public void StartLoadGame()
     {
-        if (Application.isEditor)
-        {
-            m_assembly = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "ScriptsGame");
-            _startGame();
-            return;
-        }
+        //if (Application.isEditor)
+        //{
+        //    m_assembly = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "ScriptsGame");
+        //    _startGame();
+        //    return;
+        //}
 
         string file = Path.Combine(UGFileUtil.ResPath_OutApp, AssemblyFile);
         if (!File.Exists(file))

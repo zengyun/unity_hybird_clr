@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MainLoadingPanel : RTBase
@@ -23,21 +24,25 @@ public class MainLoadingPanel : RTBase
         }
     }
 
-    private float slider_min_width = 84;
-    private float slider_max_width = 600;
-    RectTransform slider_transform;
-    GameObject m_slider;
+    public float slider_min_width = 84;
+    public float slider_max_width = 600;
+    public RectTransform slider_transform;
+    public TextMeshProUGUI m_note;
+    public GameObject m_slider;
     private void Awake()
     {
         name = "MainLoadingPanel";
         Debug.Log("MainLoadingPanel Awake");
         m_slider = RT.Find("root/slider").gameObject;
-        m_slider.SetActive(false);
+        //m_slider.SetActive(false);
         slider_transform = RT.Find("root/slider/bar").GetComponent<RectTransform>();
+        m_note = RT.Find("root/slider/note").GetComponent<TextMeshProUGUI>();
+        //m_note.gameObject.SetActive(false);
     }
 
     public void SetProcess(float value)
     {
+        Debug.Log($"MainLoadingPanel SetProcess {value}");
         if (value < 0) value = 0;
         if(value > 100) value = 100;
         m_slider.SetActive(true);
